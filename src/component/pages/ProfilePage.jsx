@@ -50,25 +50,33 @@ function ProfilePage() {
           <div className="flex flex-col sm:flex-row items-center space-y-6 sm:space-y-0 sm:space-x-6">
             <div className="mt-10 flex flex-col sm:flex-row items-center space-y-6 sm:space-y-0 sm:space-x-6">
               {/* Profile Details */}
-              <div className="text-center sm:text-left">
-                <h1 className="text-2xl sm:text-3xl font-semibold text-gray-800 font-lexend">
-                  {user.username}
-                </h1>
+              <div className="flex items-center justify-center sm:justify-start space-x-6">
+                <h2 className="text-xl font-semibold text-gray-800">
+                  Name:{" "}
+                  <span className=" text-gray-500 font-medium hover:text-gray-700 transition-colors duration-300">
+                    {user.username}
+                  </span>
+                </h2>
+                <h2 className="text-xl font-semibold text-gray-800">
+                  Post:{" "}
+                  <span className="">
+                    {posts.length}
+                  </span>
+                </h2>
               </div>
+
             </div>
           </div>
         </div>
 
         {/* Post Grid */}
         <div className="mt-10 max-w-6xl mx-auto px-4 sm:px-6">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6">Posts</h2>
           <div className="mb-32 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {posts.map((post, index) => (
               <div
                 key={index}
-                className={`relative bg-white rounded-lg shadow-md flex flex-col ${
-                  post.imageUrl ? "min-h-[250px]" : "min-h-[150px]"
-                }`}
+                className={`relative bg-white rounded-lg shadow-md flex flex-col ${post.imageUrl ? "min-h-[250px]" : "min-h-[150px]"
+                  }`}
               >
                 {/* Post Image or Placeholder */}
                 {post.imageUrl ? (

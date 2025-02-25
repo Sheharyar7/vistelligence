@@ -50,7 +50,7 @@ const ChatUI = () => {
               <button
                 key={index}
                 onClick={() => handleSuggestionClick(suggestion)}
-                className="block w-full text-left bg-gray-300 hover:bg-gray-800 text-gray-700 px-4 py-2 rounded-lg font-lexend"
+                className="block w-full text-left bg-gray-300 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-lg font-lexend"
               >
                 {suggestion}
               </button>

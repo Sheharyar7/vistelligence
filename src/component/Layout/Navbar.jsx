@@ -1,10 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import {
-  FaUserCircle,
+  FaCog,
   FaTwitch,
   FaRobot,
   FaPlusCircle,
-  FaCog,
   FaBus,
   FaUser,
   FaSignInAlt,
@@ -40,11 +39,11 @@ const Navbar = () => {
   return (
     <>
       {/* Desktop Navbar */}
-      <nav className="hidden sm:flex items-center justify-between p-4 bg-gradient-to-r from-slate-700 via-slate-600 to-slate-700 text-white shadow-lg">
+      <nav className="hidden sm:flex items-center justify-between  p-4 bg-gradient-to-r from-slate-700 via-slate-600 to-slate-700 text-white shadow-lg">
         <div className="flex items-center">
           <Link to="/" className="text-2xl font-bold flex items-center">
             {/* Circular Icon */}
-            <div className="flex items-center justify-center w-14 h-14 rounded-full overflow-hidden">
+            <div className="flex items-center justify-center w-16 h-16 rounded-full overflow-hidden">
               <img
                 src="images/vintageLogo.jpg"
                 alt="Vintage Logo"
@@ -58,7 +57,7 @@ const Navbar = () => {
 </Link>
         </div>
 
-        <ul className="flex gap-6 items-center">
+        <ul className="flex gap-6 items-center mt-[14px]">
           <li className="mr-7 text-2xl hover:underline decoration-2 underline-offset-8">
             <Link
               to="/"
@@ -100,7 +99,11 @@ const Navbar = () => {
           className="relative"
           onClick={() => setDropdownOpen((prev) => !prev)}
         >
-          <FaUser className="text-2xl cursor-pointer hover:text-gray-300" />
+        <div className="flex items-center cursor-pointer  rounded">
+        <FaCog className="text-2xl cursor-pointer hover:text-gray-300" />
+        <p className="ml-2 mt-4">Settings</p>
+</div>
+
           {isDropdownOpen && (
             <div
               ref={dropdownRef} // Attach ref to dropdown menu

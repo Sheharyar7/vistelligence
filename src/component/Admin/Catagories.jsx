@@ -55,13 +55,13 @@ const Categories = () => {
               />
             </div>
           </Link>
-    
-          {/* Centered Navigation Links */}
+
+
           <ul className="flex gap-6 items-center justify-center flex-1">
             <li>
-              <Link to="/notverify" className="flex items-center gap-2 hover:text-gray-300 transition-colors">
-                <FaBan />
-                <span>Block</span>
+              <Link to="/report" className="flex items-center gap-2 hover:text-gray-300 transition-colors">
+                <FaFlag />
+                <span>Reported Post</span>
               </Link>
             </li>
             <li>
@@ -71,21 +71,21 @@ const Categories = () => {
               </Link>
             </li>
             <li>
-              <Link to="/report" className="flex items-center gap-2 hover:text-gray-300 transition-colors">
-                <FaFlag />
-                <span>Reported Post</span>
+              <Link to="/notverify" className="flex items-center gap-2 hover:text-gray-300 transition-colors">
+                <FaBan />
+                <span>Block</span>
               </Link>
             </li>
           </ul>
         </nav>
-    
+
         {/* Mobile Navbar */}
         <nav className="fixed bottom-0 left-0 w-full bg-gradient-to-r from-slate-700 via-slate-600 to-slate-700 text-white shadow-lg sm:hidden z-50">
           <ul className="flex justify-around items-center p-2">
             <li>
-              <Link to="/block" className="flex flex-col items-center text-sm hover:text-gray-300 transition-colors">
-                <FaBan className="text-2xl" />
-                <span>Block</span>
+              <Link to="/report" className="flex items-center gap-2 hover:text-gray-300 transition-colors">
+                <FaFlag />
+                <span>Reported Post</span>
               </Link>
             </li>
             <li>
@@ -95,9 +95,9 @@ const Categories = () => {
               </Link>
             </li>
             <li>
-              <Link to="/reported-posts" className="flex flex-col items-center text-sm hover:text-gray-300 transition-colors">
-                <FaFlag className="text-2xl" />
-                <span>Reported Post</span>
+              <Link to="/notverify" className="flex items-center gap-2 hover:text-gray-300 transition-colors">
+                <FaBan />
+                <span>Block</span>
               </Link>
             </li>
           </ul>
@@ -116,11 +116,10 @@ const Categories = () => {
                 <div key={index}>
                   <button
                     onClick={() => handleCategoryClick(category)}
-                    className={`w-full text-left p-2 rounded-md font-medium transition-colors ${
-                      selectedCategory === category
+                    className={`w-full text-left p-2 rounded-md font-medium transition-colors ${selectedCategory === category
                         ? "bg-blue-500 text-white"
                         : "bg-white text-gray-700 hover:bg-blue-100"
-                    }`}
+                      }`}
                   >
                     {category}
                   </button>
@@ -170,17 +169,17 @@ const Categories = () => {
 
                   {/* Footer with Comments */}
                   <div className="relative">
-                  <div className="absolute -bottom-[70px] mr-40 w-[200px] -left-4 flex items-center justify-between p-4 bg-white rounded-br-[300px] shadow-md">
-                    <div className="space-x-3">
-                      <button className="bg-green-500 text-white py-1 px-3 rounded-lg text-sm font-medium hover:bg-green-600 flex-shrink-0">
-                        Accept
-                      </button>
-                      <button className="bg-red-500 text-white py-1 px-3 rounded-lg text-sm font-medium hover:bg-red-600 flex-shrink-0">
-                        Decline
-                      </button>
+                    <div className="absolute -bottom-[70px] mr-40 w-[200px] -left-4 flex items-center justify-between p-4 bg-white rounded-br-[300px] shadow-md">
+                      <div className="space-x-3">
+                        <button className="bg-green-500 text-white py-1 px-3 rounded-lg text-sm font-medium hover:bg-green-600 flex-shrink-0">
+                          Accept
+                        </button>
+                        <button className="bg-red-500 text-white py-1 px-3 rounded-lg text-sm font-medium hover:bg-red-600 flex-shrink-0">
+                          Decline
+                        </button>
+                      </div>
                     </div>
                   </div>
-                </div>
                 </div>
               ))}
           </div>

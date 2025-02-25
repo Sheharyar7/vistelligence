@@ -6,7 +6,6 @@ import UserProfile from './component/pages/UserProfile';
 import ProfilePage from './component/pages/ProfilePage';
 import Signup from './component/pages/SignUp';
 import Login from './component/pages/Login';
-import Main from './component/Admin/Main';
 import NonVerifyPage from './component/Admin/NonVerifyPage';
 import VerifyPage from './component/Admin/VerifyPage';
 import Categories from './component/Admin/Catagories';
@@ -50,7 +49,6 @@ function App() {
         <Route path="/Account" element={<ProfilePage />}  />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/shery"  element={<Main />}  />
         <Route path="/notverify" element={<NonVerifyPage />} />
         <Route path="/verify" element={<VerifyPage />} />
         <Route path="/report" element={<Categories />} />

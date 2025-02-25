@@ -44,9 +44,6 @@ const PostingCard = ({ post }) => {
               <div className="absolute top-full right-0 mt-2 w-32 bg-white shadow-lg rounded-md z-10">
                 <ul>
                   <li className="px-4 py-2 text-gray-700 hover:bg-gray-200 cursor-pointer">
-                    Hide
-                  </li>
-                  <li className="px-4 py-2 text-gray-700 hover:bg-gray-200 cursor-pointer">
                     Report
                   </li>
                 </ul>

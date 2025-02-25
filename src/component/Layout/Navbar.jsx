@@ -52,7 +52,7 @@ const Navbar = () => {
             </div>
             {/* Text */}
           </Link>
-          <Link to="/shery">
+          <Link to="/report">
           <AiFillCheckCircle />
 </Link>
         </div>

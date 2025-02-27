@@ -11,7 +11,7 @@ import {
 const Categories = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const categories = ["All", "misLeading Information", "Wate Speach", "False News", "Others"];
+  const categories = ["All", "misLeading Information", "Hate Speach", "False News", "Others"];
   const posts = [
     {
       userName: "John",
@@ -22,7 +22,7 @@ const Categories = () => {
     },
     {
       userName: "Jane",
-      category: "Wate Speach",
+      category: "Hate Speach",
       imageUrl: "images/Post2.jpg",
       description: "Exploring the latest fashion trends.",
       comments: ["Beautiful outfits!", "I want those!"],
